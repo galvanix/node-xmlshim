@@ -23,11 +23,11 @@
   , "url" : "git@github.com:znerol/node-xmlshim.git"
   }
 , "dependencies" :
-  { "jsdom" : "0.2.x"
-  , "libxmljs" : "0.8.1"
+  { "jsdom" : "3.x.x"
+  , "libxmljs" : "0.13"
   }
 , "devDependencies" :
   { "browserify" : "1.10.x"
-  , "nodeunit" : "0.6.x"
+  , "nodeunit" : "0.9.x"
   }
 }

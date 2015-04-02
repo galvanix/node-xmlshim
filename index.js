@@ -1,4 +1,4 @@
-var dom = require("jsdom").level(3, 'core'),
+var dom = require("jsdom/lib/jsdom/living"),
     xml = require("libxmljs"),
     handlersForDocument = require("./domparser.js").handlersForDocument,
     DOMWriter = require("./domwriter.js").DOMWriter;
@@ -7,7 +7,7 @@ exports.DOMParser = function() {
 }
 
 exports.DOMParser.prototype.parseFromString = function(str, mime) {
-    var doc = new dom.Document(),
+    var doc = new dom.Document({ parsingMode:'xml' }),
         parser = new xml.SaxParser(handlersForDocument(doc));
 
     parser.parseString(str);
